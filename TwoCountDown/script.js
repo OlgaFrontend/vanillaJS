@@ -1,10 +1,11 @@
-var CountDown = function () {
-		var day = document.getElementById('day');
-		var hour = document.getElementById('hour');
-		var minute = document.getElementById('minute');
-		var second = document.getElementById('second');
+(function() {
+	var day = document.getElementById('day');
+	var hour = document.getElementById('hour');
+	var minute = document.getElementById('minute');
+	var second = document.getElementById('second');
 
-
+	function countDown() {
+		
 		var time = new Date();
 
 		var eventDate = new Date(2017, 10, 06);
@@ -33,19 +34,11 @@ var CountDown = function () {
 		hour.textContent = h;
 		minute.textContent = m;
 		second.textContent = s;
-
-		setInterval(CountDown, 1000);
 	}
-
-CountDown();
-// var c1 = new CountDown({
-// 	countDownId: 'countDown1'
-// });
-
-// var c2 = new CountDown({
-// 	countDownId: 'countDown2'
-// });
-
+    
+    countDown();
+	setInterval(countDown, 1000);
+})();
 
 
     
