@@ -1,0 +1,23 @@
+.countDown {
+	display: flex;
+}
+
+.values {
+	margin: 5px;
+	padding: 13px 12px;
+	font-family: 'robotoregular', sans-serif, Arial;
+	font-size: 36px;
+	color: #292929;
+	border-radius: 5px;
+	background-color: #f6c90e;
+}
+
+.values:after {
+	position: absolute;
+	content: '';
+	border: 1px solid rgba(224, 180, 0, 0.5);
+	width: 61px;
+	margin-left: -52px;
+	margin-top: 17px;
+	z-index: 0;
+}
