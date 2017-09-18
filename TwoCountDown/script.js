@@ -1,15 +1,10 @@
-(function() {
-	var day = document.getElementById('day');
-	var hour = document.getElementById('hour');
-	var minute = document.getElementById('minute');
-	var second = document.getElementById('second');
-
+function timerFunc (day, hour, minute, second) {
 	function countDown() {
-		
+
 		var time = new Date();
 
-		var eventDate = new Date(2017, 10, 06);
-		
+		var eventDate = new Date(2017, 12, 31);
+
 		var currentTime = time.getTime();
 
 		var eventTime = eventDate.getTime();
@@ -34,14 +29,22 @@
 		hour.textContent = h;
 		minute.textContent = m;
 		second.textContent = s;
-	}
-    
+	};
+
     countDown();
 	setInterval(countDown, 1000);
-})();
+};
 
+var day = document.getElementById('day');
+var hour = document.getElementById('hour');
+var minute = document.getElementById('minute');
+var second = document.getElementById('second');
 
-    
-   
-    
+timerFunc (day, hour, minute, second);
 
+var day2 = document.getElementById('day2');
+var hour2 = document.getElementById('hour2');
+var minute2 = document.getElementById('minute2');
+var second2 = document.getElementById('second2');
+
+timerFunc (day2, hour2, minute2, second2);
